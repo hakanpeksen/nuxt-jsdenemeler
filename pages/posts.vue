@@ -30,7 +30,8 @@
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+export default Vue.extend({
   async asyncData({ app }) {
     try {
       const response = await app.$axios.get(
@@ -43,7 +44,7 @@ export default {
     }
   },
   data: () => ({
-    postsPerPage: 15,
+    postsPerPage: 10,
   }),
   computed: {
     currentPage() {
@@ -69,18 +70,18 @@ export default {
       return Array.from(Array(pagesCount).keys())
     },
   },
-}
+})
 </script>
 
 <style scoped>
-.container {
+/* .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 .posts {
   list-style: none;
   margin-bottom: 30px;

@@ -77,7 +77,7 @@
                   <option
                     v-for="city in userData.cities"
                     :key="city"
-                    :selected="city == 'Adana'"
+                    :selectedCity="city == 'Adana'"
                   >
                     {{ city }}
                   </option>

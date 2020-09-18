@@ -2,7 +2,8 @@
   <div>
     <!-- parametresiz çalışır -->
     <!-- <button class="button" @click="increaseCounter">+ Arttır</button>
-    <button class="button" @click="decreaseCounter">- Azalt</button> -->
+   -->
+    <button class="button" @click="decreaseCounter">- Azalt</button>
     <!-- parametreli çalışır -->
     <button class="button" @click="increaseCounter(4)">+4 Arttır</button>
     <button class="button" @click="increment(5)">+5 Arttır</button>
