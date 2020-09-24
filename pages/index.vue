@@ -47,6 +47,11 @@
         @click.prevent="visibility = true"
       />
     </div> -->
+    <div>
+      <button @click="success">Success Notify</button>
+      <button @click="error">Error Notify</button>
+    </div>
+    <notifications group="foo" />
   </div>
 </template>
 
@@ -65,6 +70,27 @@ export default {
   computed: {
     fetchedPosts() {
       return this.$store.getters.getPosts
+    },
+  },
+
+  methods: {
+    success() {
+      this.$notify({
+        group: 'foo',
+        type: 'success',
+        title: 'Hello Notify',
+        text: 'response',
+        duration: 2000,
+      })
+    },
+    error() {
+      this.$notify({
+        group: 'foo',
+        type: 'error',
+        title: 'Hello Notify',
+        text: 'response error',
+        duration: 2000,
+      })
     },
   },
 }

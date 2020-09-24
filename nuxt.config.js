@@ -38,6 +38,10 @@ export default {
     {
       src: '~/plugins/font-awesome',
     },
+    {
+      src: '~/plugins/vue-notification',
+      ssr: false,
+    },
   ],
   /*
    ** Auto import components
