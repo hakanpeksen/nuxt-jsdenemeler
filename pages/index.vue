@@ -1,22 +1,24 @@
 <template>
-  <div class="container">
+  <div>
     <div>
       <ul v-for="post in fetchedPosts" :key="post.id">
         <li>{{ post.title }}</li>
       </ul>
     </div>
-
-    <font-awesome-icon
-      v-if="visibility"
-      :icon="['far', 'eye-slash']"
-      @click.prevent="visibility = false"
-    />
-    <font-awesome-icon
-      v-else
-      :icon="['far', 'eye']"
-      @click.prevent="visibility = true"
-    />
-
+    <button class="visibility_button">
+      <font-awesome-icon
+        v-if="visibility"
+        :icon="['far', 'eye-slash']"
+        size="2x"
+        @click.prevent="visibility = false"
+      />
+      <font-awesome-icon
+        v-else
+        :icon="['far', 'eye']"
+        size="2x"
+        @click.prevent="visibility = true"
+      />
+    </button>
     <!-- <div>
       <font-awesome-icon
         :icon="['far', 'eye']"
@@ -94,3 +96,14 @@ export default {
 //   },
 // },
 </script>
+<style>
+.visibility_button {
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+</style>
