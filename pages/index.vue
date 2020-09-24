@@ -5,6 +5,35 @@
         <li>{{ post.title }}</li>
       </ul>
     </div>
+
+    <div>
+      <font-awesome-icon
+        :icon="['far', 'eye']"
+        @click.prevent="visibility = true"
+      />
+      <font-awesome-icon
+        :icon="['far', 'eye-slash']"
+        @click.prevent="visibility = true"
+      />
+      <font-awesome-icon
+        :icon="['far', 'bookmark']"
+        @click.prevent="visibility = true"
+      />
+      <font-awesome-icon
+        :icon="['far', 'image']"
+        @click.prevent="visibility = true"
+      />
+      <font-awesome-icon
+        :icon="['far', 'id-card']"
+        size="3x"
+        @click.prevent="visibility = true"
+      />
+      <font-awesome-icon
+        :icon="['far', 'map']"
+        size="2x"
+        @click.prevent="visibility = true"
+      />
+    </div>
   </div>
 </template>
 
