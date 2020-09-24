@@ -6,7 +6,18 @@
       </ul>
     </div>
 
-    <div>
+    <font-awesome-icon
+      v-if="visibility"
+      :icon="['far', 'eye-slash']"
+      @click.prevent="visibility = false"
+    />
+    <font-awesome-icon
+      v-else
+      :icon="['far', 'eye']"
+      @click.prevent="visibility = true"
+    />
+
+    <!-- <div>
       <font-awesome-icon
         :icon="['far', 'eye']"
         @click.prevent="visibility = true"
@@ -33,7 +44,7 @@
         size="2x"
         @click.prevent="visibility = true"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -43,6 +54,11 @@ export default {
     const res = await $axios.get('https://jsonplaceholder.typicode.com/posts')
     const data = res.data.slice(0, 6)
     store.commit('setPosts', data)
+  },
+  data() {
+    return {
+      visibility: false,
+    }
   },
   computed: {
     fetchedPosts() {
