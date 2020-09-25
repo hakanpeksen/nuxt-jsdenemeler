@@ -1,7 +1,7 @@
 <template>
   <div>
-    <counter @counterEvent="counter += $event"></counter>
-    <result :counter="counter"></result>
+    <Counter @counterEvent="counter += $event"></Counter>
+    <Result :counter="counter"></Result>
   </div>
 </template>
 
@@ -11,13 +11,13 @@ import Result from '@/components/Result'
 export default {
   components: {
     Counter,
-    Result,
+    Result
   },
   data() {
     return {
-      counter: 0,
+      counter: 0
     }
-  },
+  }
 }
 </script>
 

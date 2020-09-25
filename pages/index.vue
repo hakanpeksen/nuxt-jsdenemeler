@@ -18,8 +18,8 @@ export default {
   computed: {
     fetchedPosts() {
       return this.$store.getters.getPosts
-    },
-  },
+    }
+  }
 }
 
 // asyncData  örneği

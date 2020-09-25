@@ -18,8 +18,8 @@
           :to="{
             name: 'posts',
             query: {
-              page: i + 1,
-            },
+              page: i + 1
+            }
           }"
         >
           {{ i + 1 }}
@@ -44,7 +44,7 @@ export default Vue.extend({
     }
   },
   data: () => ({
-    postsPerPage: 10,
+    postsPerPage: 10
   }),
   computed: {
     currentPage() {
@@ -68,8 +68,8 @@ export default Vue.extend({
       // kaç adet pagination olacağını gösterir (7 adet)  pagesCount=  100/15 =6.66
       const pagesCount = Math.ceil(this.posts.length / this.postsPerPage)
       return Array.from(Array(pagesCount).keys())
-    },
-  },
+    }
+  }
 })
 </script>
 

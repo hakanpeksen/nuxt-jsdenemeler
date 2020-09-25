@@ -12,14 +12,14 @@
 import Tags from '@/components/Tags'
 export default {
   components: {
-    Tags,
+    Tags
   },
   data() {
     return {
       tags: 'deneme,test,gkandemir',
-      tags2: 'deneme,test,gkandemir,klavye,telsiz',
+      tags2: 'deneme,test,gkandemir,klavye,telsiz'
     }
-  },
+  }
 }
 </script>
 

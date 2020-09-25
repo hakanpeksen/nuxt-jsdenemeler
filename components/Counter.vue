@@ -20,7 +20,7 @@ export default {
   methods: {
     // helper fonksiyonları
     ...mapMutations(['increaseCounter', 'decreaseCounter']),
-    ...mapActions(['increment', 'decrement', 'incAsync']),
+    ...mapActions(['increment', 'decrement', 'incAsync'])
 
     // increment(){
     //   this.$store.dispatch("increment");
@@ -41,7 +41,7 @@ export default {
     //   // this.$store.state.counter--;
     //   this.$store.commit("decreaseCounter");
     // }
-  },
+  }
 }
 </script>
 

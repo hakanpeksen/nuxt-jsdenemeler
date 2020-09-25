@@ -1,6 +1,6 @@
 export const state = () => ({
   fetchedPosts: [],
-  counter: 0,
+  counter: 0
 })
 
 export const getters = {
@@ -15,7 +15,7 @@ export const getters = {
   },
   stringCounter(state) {
     return state.counter + '.kez tıklandı'
-  },
+  }
 }
 
 export const actions = {
@@ -32,7 +32,7 @@ export const actions = {
     setTimeout(() => {
       commit('increaseCounter', 10)
     }, payload.time)
-  },
+  }
 }
 
 export const mutations = {
@@ -48,5 +48,5 @@ export const mutations = {
   // },
   decreaseCounter(state) {
     state.counter--
-  },
+  }
 }

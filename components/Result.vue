@@ -14,8 +14,8 @@ export default {
     },
     stringCounter() {
       return this.$store.getters.stringCounter
-    },
-  },
+    }
+  }
 }
 </script>
 
