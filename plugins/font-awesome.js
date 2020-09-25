@@ -8,7 +8,7 @@ import {
   faBookmark,
   faImage,
   faIdCard,
-  faMap,
+  faMap
 } from '@fortawesome/free-regular-svg-icons'
 
 library.add({
@@ -17,6 +17,6 @@ library.add({
   faBookmark,
   faImage,
   faIdCard,
-  faMap,
+  faMap
 })
 Vue.component('font-awesome-icon', FontAwesomeIcon)

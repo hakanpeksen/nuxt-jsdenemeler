@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>{{ $t('title') }}</h2>
     <div>
       <ul v-for="post in fetchedPosts" :key="post.id">
         <li>{{ post.title }}</li>
@@ -64,13 +65,13 @@ export default {
   },
   data() {
     return {
-      visibility: false,
+      visibility: false
     }
   },
   computed: {
     fetchedPosts() {
       return this.$store.getters.getPosts
-    },
+    }
   },
 
   methods: {
@@ -80,7 +81,7 @@ export default {
         type: 'success',
         title: 'Hello Notify',
         text: 'response',
-        duration: 2000,
+        duration: 2000
       })
     },
     error() {
@@ -89,10 +90,10 @@ export default {
         type: 'error',
         title: 'Hello Notify',
         text: 'response error',
-        duration: 2000,
+        duration: 2000
       })
-    },
-  },
+    }
+  }
 }
 
 // asyncData  örneği
@@ -124,9 +125,6 @@ export default {
 </script>
 <style>
 .visibility_button {
-  position: absolute;
-  left: 5%;
-  top: 25%;
   cursor: pointer;
   background-color: transparent;
   border: 0;

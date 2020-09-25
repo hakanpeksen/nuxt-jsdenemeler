@@ -120,7 +120,7 @@
 import Switch from '@/components/Switch'
 export default {
   components: {
-    appSwitch: Switch,
+    appSwitch: Switch
   },
   data() {
     return {
@@ -138,19 +138,19 @@ export default {
           'İzmir',
           'Bursa',
           'Konya',
-          'Trabzon',
+          'Trabzon'
         ],
-        selectedCity: '',
+        selectedCity: ''
       },
       switched: true,
-      isSubmitted: false,
+      isSubmitted: false
     }
   },
   methods: {
     submit() {
       this.isSubmitted = true
-    },
-  },
+    }
+  }
 }
 </script>
 

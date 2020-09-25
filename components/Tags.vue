@@ -16,7 +16,7 @@
 import Tag from './Tag'
 export default {
   components: {
-    Tag,
+    Tag
   },
   /* eslint-disable*/
   props: {

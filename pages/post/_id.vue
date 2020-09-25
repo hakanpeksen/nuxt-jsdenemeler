@@ -21,6 +21,6 @@ export default {
     } catch (error) {
       return {}
     }
-  },
+  }
 }
 </script>
