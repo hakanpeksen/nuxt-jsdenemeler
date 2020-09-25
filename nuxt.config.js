@@ -58,6 +58,10 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
   ],
+  tailwindcss: {
+    // add '~tailwind.config` alias
+    exposeConfig: true
+  },
   /*
    ** Nuxt.js modules
    */
@@ -65,11 +69,20 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     ['nuxt-i18n', I18N],
-    'nuxt-purgecss'
+    'nuxt-purgecss',
+    '@nuxtjs/tailwindcss'
   ],
-  purgeCSS: {
-    mode: 'postcss',
-    enabled: process.env.NODE_ENV === 'production'
+  purge: {
+    //enable remove unused CSS only in production
+    enabled: process.env.NODE_ENV === 'production',
+    //any file that may contain the reference of CSS styles by class name.
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js'
+    ]
   },
   /*
    ** Axios module configuration
@@ -84,23 +97,23 @@ export default {
     /*
      ** PostCSS setup
      */
-    postcss: {
-      // Add plugin names as key and arguments as value
-      // Disable a plugin by passing false as value
-      plugins: {
-        'postcss-url': {},
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-        cssnano: {
-          preset: 'default',
-          discardComments: { removeAll: true },
-          zIndex: false
-        }
-      },
-      // Change the postcss-preset-env settings
-      preset: {
-        stage: 1
-      }
-    },
+    // postcss: {
+    //   // Add plugin names as key and arguments as value
+    //   // Disable a plugin by passing false as value
+    //   plugins: {
+    //     'postcss-url': {},
+    //     tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+    //     cssnano: {
+    //       preset: 'default',
+    //       discardComments: { removeAll: true },
+    //       zIndex: false
+    //     }
+    //   },
+    //   // Change the postcss-preset-env settings
+    //   preset: {
+    //     stage: 1
+    //   }
+    // },
     /*
      ** You can extend webpack config here
      */

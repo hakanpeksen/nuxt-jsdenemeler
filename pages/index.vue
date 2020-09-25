@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 class="bg-red">RED</h1>
-    <h1 class="bg-blue">blue</h1>
+    <h1 class="bg-green-lime">lime</h1>
+    <h1 class="bg-green-yellow">yellow</h1>
     <h3 class="text-4xl text-center border-solid border-b-2 mb-6 text-teal-700">
       Search iTunes
     </h3>
@@ -43,3 +43,5 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped></style>

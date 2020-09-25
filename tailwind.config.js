@@ -7,9 +7,15 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
-    colors: {
-      blue: '#007ace',
-      red: '#de3618'
+    extend: {
+      colors: {
+        green: {
+          default: 'var(--green-default)',
+          yellow: 'var(--green-yellow)',
+          lime: 'var(--green-lime)',
+          olive: 'var(--green-olive)'
+        }
+      }
     }
   },
   variants: {},
