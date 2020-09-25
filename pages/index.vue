@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ albumData[0].artistName }}
     <h2>{{ $t('title') }}</h2>
     <div>
       <ul v-for="post in fetchedPosts" :key="post.id">
@@ -63,11 +64,20 @@ export default {
     const data = res.data.slice(0, 6)
     store.commit('setPosts', data)
   },
+  asyncData({ $axios }) {
+    return $axios
+      .get(`https://itunes.apple.com/search?term=2&entity=album&limit=20`)
+      .then((response) => {
+        console.log(response)
+        return { albumData: response.data.results }
+      })
+  },
   data() {
     return {
       visibility: false
     }
   },
+
   computed: {
     fetchedPosts() {
       return this.$store.getters.getPosts
