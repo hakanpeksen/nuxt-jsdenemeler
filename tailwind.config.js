@@ -6,7 +6,12 @@ module.exports = {
   prefix: '',
   important: false,
   separator: ':',
-  theme: {},
+  theme: {
+    colors: {
+      blue: '#007ace',
+      red: '#de3618'
+    }
+  },
   variants: {},
   plugins: []
 }
